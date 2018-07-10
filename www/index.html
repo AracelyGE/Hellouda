@@ -32,49 +32,75 @@
 </head>
 
 <body>
-
-
-    <div data-role="page" id="foo">
-
-        <div data-role="header">
-            <h1>EL TITLE</h1>
-        </div>
-
-        <div data-role="main" class="ui-content">
-            <label for="text-19">Nombre</label>
-            <input type="text" data-clear-btn="true" name="nombre" id="nom1">
-            <br>
-            <label for="email-2">E-mail</label>
-            <input type="email" data-clear-btn="true" name="email" id="email2">
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar" data-iconpos="bottom">
-                <ul>
-                    <li><a href="#bar" id="sig1" data-icon="forward">Siguiente</a>
-                    <li><a href="#device" id="dis1" data-icon="phone" class="ui-btn-active">Dispositivo</a>
-                    <li><a href="#" id="red1" data-icon="gear">Red</a>
-                        
-                    </li>
-                </ul>
+        <div data-role="page" id="foo"> 
+            
+            <div data-role="header">
+                <h1>Page Title</h1>
             </div>
-        </div>
+        
+            <div role="main" class="ui-content">
+                <label for="text-19">Nombre</label>
+                <input type="text" data-clear-btn="true" name="nombre" id="nom1">
+                <br>
+                <label for="email-2">Email</label>
+                <input type="email" data-clear-btn="true" name="email" id="email2">
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#bar" id="sig1" data-icon="forward">Siguiente</a></li>
+                        <li><a href="#device"  id="dis1"  data-icon="phone" class="ui-btn-active">Dispositivo</a></li>
+                        <li><a href="#" id="red1" data-icon="gear">Red</a></li>
+                    </ul>
+                </div>
+            </div>          
+        </div>  
 
-    </div>
-   <!-- <div class="app">
-        <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is ajksdfa</p>
-        </div>
-    </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-    -->
-    
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------->      
+        <!-- Start of second page -->
+        <div data-role="page" id="bar">
+
+            <div data-role="header">
+                <h1>Bar</h1>
+                <a href="#foo" data-role="button" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left ui-corner-all ui-btn-right">Contacto</a>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <label for="text-basic">Peso:</label>
+                <input type="number" data-clear-btn="true" name="number-1" id="peso">
+        
+                <label for="text-basic">Altura(cm):</label>
+                <input type="number" data-clear-btn="true" name="number-2" id="altura">
+
+                <a href="#" id="calc" class="ui-btn ui-icon-grid ui-btn-icon-left">calcular</a>
+                <a href="#" id="enviar" class="ui-btn ui-icon-mail ui-btn-icon-left">Enviar</a>
+            </div><!-- /content -->
+        
+            <div data-role="footer" data-position="fixed">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Start new page -->
+        <div data-role="page" id="device">
+
+            <div data-role="header">
+                <h1>Información de Dispositivo</h1>
+                <a href="#" data-role="button" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left ui-corner-all ui-btn-right" data-rel="back">Regresar</a>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>Datos de Dispositivo</p>
+                <div id="data"> 
+                </div>
+            </div><!-- /content -->
+
+            <div data-role="footer" data-position="fixed">
+                <h4>...</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->        
 </body>
 
 
